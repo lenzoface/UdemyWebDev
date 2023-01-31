@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+
+    <%- include('partials/navbar') %> 
+    
+    <h1>Your random number: <%= num %></h1>
+    <!-- 'num' from index.js -->
+    <% if(num % 2 === 0) { %>
+        <h2>That is an even number!</h2>
+    <% } else { %>
+    <h2>That is an odd number!</h2>        
+    <% } %>
+    <!-- We need to surround every LINE of JS code in < % ... % > -->
+    <h3>That number is: <%= num%2===0 ? 'EVEN' : 'ODD' %></h3>
+    <!-- < % = TURNERY OPERATOR: '?' - if that's the case, ':' - otherwise % > -->
+
+    <%- include('partials/footer') %>

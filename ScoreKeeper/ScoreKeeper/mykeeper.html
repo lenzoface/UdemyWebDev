@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper by Sherkhan K.</title>
+</head>
+<body>
+    <h1>Score Keeper</h1>
+    <h2><span id="p1">0</span> to <span id="p2">0</span></h2>
+    <hr>
+    <h3>Playing to:</h3>
+    <select name="score" id="scrSlct">
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="11">11</option>
+    </select>
+
+    <hr>
+
+    <form action="/select" id="form">
+        <button type="submit" id="plusP1">+1 Player One</button>
+        <button type="submit" id="plusP2">+1 Player Two</button>
+        <button type="submit" id="reset">Reset</button>
+    </form>
+
+    <script src="mykeeper.js"></script>
+</body>
+</html>

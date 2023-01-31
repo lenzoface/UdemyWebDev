@@ -1,0 +1,47 @@
+try...catch
+The try...catch statement is comprised of a try block and either a catch block, a finally block, or both. The code in the try block is executed first, and if it throws an exception, the code in the catch block will be executed. The code in the finally block will always be executed before control flow exits the entire construct.
+
+Syntax:
+//
+try {
+  tryStatements
+} catch (exceptionVar) {
+  catchStatements
+} finally {
+  finallyStatements
+}
+//
+
+tryStatements:
+The statements to be executed.
+
+catchStatements:
+Statement that is executed if an exception is thrown in the try-block.
+
+exceptionVar: (Optional)
+An optional identifier to hold the caught exception for the associated catch block. If the catch block does not utilize the exception's value, you can omit the exceptionVar and its surrounding parentheses, as catch {...}.
+
+finallyStatements:
+Statements that are executed before control flow exits the try...catch...finally construct. These statements execute regardless of whether an exception was thrown or caught.
+
+
+// Examples:
+
+try {
+    hello.toUpperCase();
+} catch {
+    console.log("ERROR!!!!")
+}
+hello.toUpperCase();
+
+console.log("AFTER!")
+//
+//
+function yell(msg) {
+    try {
+        console.log(msg.toUpperCase().repeat(3));
+    } catch (e) {
+        console.log("Please pass a string next time!")
+    }
+}
+//

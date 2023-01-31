@@ -1,0 +1,64 @@
+\\\\\ FUNCTIONS
+Reusable procedures
+• Functions allow us to write reusable, modular code
+• We define a "chunk" of code that we can then execute at a later point.
+• We use them ALL THE TIME
+
+How to define function, common way:
+ //
+ function funcName(){
+     //do something
+ }
+ //
+
+
+\\\\\ The arguments object
+arguments is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.
+
+Examples:
+1:// function greet(firstName) {
+     console.log(`Hey there, ${firstName}!`)
+ }
+ //
+
+2:// DEFINE YOUR FUNCTION:
+ function rant(message) {
+     console.log(message.toUpperCase())
+     console.log(message.toUpperCase())
+     console.log(message.toUpperCase())
+ }
+
+ rant('Aghhh, i hate u');
+ // prints out message 3 times in upper case:
+ AGHHH, I HATE U
+ AGHHH, I HATE U
+ AGHHH, I HATE U
+ //
+
+Example of mulitiple arguments:
+ // define isSnakeEyes below:
+ function isSnakeEyes(num1, num2) {
+     if (num1 === 1 && num2 === 1) {
+         console.log('Snake Eyes!')
+     } else {
+         console.log('Not Snake Eyes!')
+     }
+ }
+
+ isSnakeEyes(1, 1); - Snake Eyes!
+ isSnakeEyes(1, 2); - Not Snake Eyes!
+ isSnakeEyes(2, 2); - Not Snake Eyes!
+ //
+
+\\\\\ Return:
+The return statement ends function execution and specifies a value to be returned to the function caller.
+Can only return ONE thing!
+
+Example:
+ //
+ function square(x) {
+   return x * x;
+ }
+ const demo = square(3);
+ // demo will equal 9
+

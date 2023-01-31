@@ -1,0 +1,10 @@
+We can store functions in variables.
+
+ //
+ const add = function (x,y) {
+     return x+y;
+ }
+ // function with the name of 'add'
+
+Functions are values in JS! Just like arrays, etc.
+We can return them like nums.

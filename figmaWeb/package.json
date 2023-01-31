@@ -1,0 +1,22 @@
+{
+  "name": "figmaweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\u001b[D\u001b[D\u001b[C\u001b[C\u001b[D",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/\u0016\u0016lenzoface/FirstTryWeb.git"
+  },
+  "author": "Sherkhan Kazbek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/\u0016\u0016lenzoface/FirstTryWeb/issues"
+  },
+  "homepage": "https://github.com/\u0016\u0016lenzoface/FirstTryWeb#readme",
+  "dependencies": {
+    "bulma": "^0.9.4"
+  }
+}

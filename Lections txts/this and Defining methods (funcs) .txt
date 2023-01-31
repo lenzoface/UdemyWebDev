@@ -1,0 +1,49 @@
+\\\\\ 
+We can create our own methods with functions!
+We can add functions as properties on objects. - Methods!
+\\\\\
+
+ // Example:
+ const myMath = {
+     PI: 3.14159,
+     square(num) {  
+     // With no shorthand - square: function (num) //
+         return num * num;
+     },
+     cube(num) {
+         return num ** 3;
+     }
+ }
+ 
+ myMath.square(2) // 4
+ myMath['square'](3) // 9 - this is odd, strange way to call a method 
+ //
+
+\\\\\\\  THIS
+this:
+A function's this keyword behaves a little differently in JavaScript compared to other languages. 
+In most cases, the value of this is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. The bind() method can set the value of a function's this regardless of how it's called, and arrow functions don't provide their own this binding (it retains the this value of the enclosing lexical context).
+
+//
+const cat = {
+    name: 'Blue Steele',
+    color: 'grey',
+    breed: 'scottish fold',
+    meow() {
+        console.log("THIS IS:", this)
+        console.log(`${this.name} says MEOWWWW`);
+    }
+}
+
+const meow2 = cat.meow;
+// expected ouput: THIS IS: window (то есть не показывает то что внутри cat)
+
+const test = {
+  prop: 42,
+  func: function() {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// expected output: 42

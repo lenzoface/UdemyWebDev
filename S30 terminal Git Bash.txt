@@ -1,0 +1,13 @@
+'ls' - list 
+'pwd' - show the folder im in
+'ls -l' - more info of files
+'cd' + 'DirectoryExample/' - navigate 
+'..' - go back
+'mkdir' - make directory
+'touch' - touch or make new file (include type of file .html, .css and so on)
+'rm' - remove file completely
+'rmdir' - remove EMPTY directory
+'rm -rf' - remove directory and everything inside forcefully 
+'--help' - info about command
+
+

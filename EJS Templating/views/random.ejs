@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+
+<body>
+    <h1>Your random number: <%= num %></h1>
+    <!-- 'num' from index.js -->
+    <% if(num % 2 === 0) { %>
+        <h2>That is an even number!</h2>
+    <% } else { %>
+    <h2>That is an odd number!</h2>        
+    <% } %>
+    <!-- We need to surround every LINE of JS code in < % ... % > -->
+    <h3>That number is: <%= num%2===0 ? 'EVEN' : 'ODD' %></h3>
+    <!-- < % = TURNERY OPERATOR: '?' - if that's the case, ':' - otherwise % > -->
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+/*  Select all - *
+ * {
+    color:blue
+} */
+body {
+    background-color: #8B94A3;
+}
+
+header button {
+    font-size: 30px;
+    background-color: #EC0B43;
+}
+
+/* we can select mutiple selectors with comma */
+h1,h2 {
+    color: #264653;
+}
+
+#signup {
+    background-color: #58355E;
+    color: #E9C46A;
+}
+
+
+span {
+    color: #FFF689;
+}
+
+.tag {
+    background-color: #028169;
+    color: #E9C46A;
+    font-size: 16px;
+}
+
+/* descendant seletor: */
+.post a {
+    color: #7AE7C7;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a {
+    color: #7AE7C7
+}
+
+/* combinators/adjacent selector: */
+h2 + button {
+    font-size: 20px;
+    background-color: #fb5d84;
+}
+
+/* direct descendant/direct child (nested): */
+footer > a {
+    color: #58355E;
+}
+
+/* attribute selector: (also can do "class" inside with ".", and any attribute!, and other variants of this selector) */
+input[type="password"] {
+    color: #EC0B43;
+}
+
+/* hover - наведенный на что-то, ':checked' for 'radio' and 'checkbox' -es 
+pseudo classes: */
+.post button:hover {
+    background-color: #7AE7C7;
+    color: #EC0B43;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: #1D2733;
+}
+
+header button:hover, #signup:hover {
+    background-color: #FFF689;
+    color: black;
+    font-size: 33px;
+}
+
+/* pseudo classes:
+2 - second only, 2n - every second (even), 2n+1 - every first (odd) */
+.post:nth-of-type(2n+1) {
+    background-color: #737b8c;
+}
+
+/* pseudo elements: */
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line {
+    color: #FFF689;
+}
+
+::selection {
+    background-color: #028169;
+}
+
+/* Speceficity: Inline styles > ID(100) > CLASS(10) > ELEMENT(1)  and addition of total id/class/elements 
+ID > Classes, attributes, pseudo-classes > Elements, pseudo-elements */
+
+
+

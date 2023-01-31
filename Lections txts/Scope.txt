@@ -1,0 +1,20 @@
+\\\   SCOPE:
+Variable "visibility"
+The location where a variable is defined dictates where we have access to that variable.
+
+A function creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions. For instance, the following is invalid:
+ //
+ function exampleFunction() {
+   const x = "declared inside function"; // x can only be  used in exampleFunction
+   console.log("Inside function");
+   console.log(x);
+ }
+
+ console.log(x); // Causes error
+ //
+
+In addition, variables declared with let or const can belong to an additional scope - Block scope:
+The scope created with a pair of curly braces (a block). (loops and if...else, etc.)
+Blocks only scope let and const declarations, but not var declarations.
+
+If a variable or expression is not in the current scope, it will not be available for use. Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.!!!!!
