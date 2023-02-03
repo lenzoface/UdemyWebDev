@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const morgan = require('morgan')
+const morgan = require('morgan');
+const AppError = require('./appError');
 
 app.use(morgan('tiny')); // morgan is logger 
 
@@ -21,7 +22,9 @@ const verifyPass = ((req, res, next) => {
     if (password === 'supersecret') {
         next();
     }
-    res.send('WORNG PASSWORD, ENTER A REAL ONE');
+    throw new AppError('WORNG PASSWORD, ENTER A REAL ONE', 501);
+    // throw new Error('Password required')
+    // res.send('WORNG PASSWORD, ENTER A REAL ONE');
 })
 
 // app.use((req, res, next) => {
@@ -43,6 +46,10 @@ app.get('/', (req, res) => {
     res.send('HOME PAGE')
 })
 
+app.get('/error', (req, res) => {
+    job.fly()
+})
+
 app.get('/dogs', (req, res) => {
     console.log(`REQUEST DATE: ${req.requestTime}`);
     res.send('WOOF WOOF')
@@ -56,6 +63,22 @@ app.get('/secret', verifyPass, (req, res) => {
 app.use((req, res) => {
     res.status(404).send('ERROR 404, not found'.toUpperCase());
 })
+
+// app.use((err, req, res, next) => {
+//     console.log('ERROR');
+//     console.log('!!!ERROR!!');
+//     console.log('ERROR');
+//     console.log(err);
+//     next(err);
+// })
+
+app.use((err, req, res, next) => {
+    const {status = 500, message = 'Something Went Wrong :('} = err;
+    res.status(status).send(message);
+    console.log(err);
+})
+
+
 
 app.listen(3000, () => {
     console.log('App is running on localhost:3000'.toUpperCase());
